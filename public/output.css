@@ -554,6 +554,10 @@ video {
   --tw-contain-style:  ;
 }
 
+.right-\[19rem\] {
+  right: 19rem;
+}
+
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -587,10 +591,6 @@ video {
   display: flex;
 }
 
-.grid {
-  display: grid;
-}
-
 .hidden {
   display: none;
 }
@@ -603,6 +603,10 @@ video {
   height: 18rem;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
 .h-\[\.35rem\] {
   height: .35rem;
 }
@@ -611,12 +615,16 @@ video {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .w-\[0\.3\%\] {
@@ -659,6 +667,10 @@ video {
   justify-content: center;
 }
 
+.gap-28 {
+  gap: 7rem;
+}
+
 .gap-\[16\.5rem\] {
   gap: 16.5rem;
 }
@@ -677,14 +689,14 @@ video {
   background-color: rgb(2 2 2 / var(--tw-bg-opacity));
 }
 
-.bg-gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(135 135 135 / var(--tw-bg-opacity));
-}
-
 .bg-gray-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(47 47 47 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 248 255 / var(--tw-bg-opacity));
 }
 
 .bg-cover {
@@ -714,8 +726,8 @@ video {
   line-height: 1.25rem;
 }
 
-.font-medium {
-  font-weight: 500;
+.font-normal {
+  font-weight: 400;
 }
 
 .text-gray-400 {
@@ -753,8 +765,7 @@ nav ul {
 .volume-slider {
   -webkit-appearance: none;
   transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-  height: 8px;
+  height: 7px;
   background: #2f2f2f;
   /* gray-500 */
   border-radius: 9999px;
@@ -773,21 +784,40 @@ nav ul {
   cursor: pointer;
 }
 
-.volume-slider::-webkit-slider-runnable-track {
-  height: 8px;
-  background: #878787;
-  /* gray-400 */
-  border-radius: 9999px;
+.volume-slider::-webkit-slider-thumb:hover {
+  background: #acabab;
+  /* lighter gray on hover */
 }
 
-.volume-slider::-moz-range-progress {
-  height: 8px;
+.volume-slider::-webkit-slider-runnable-track {
+  height: 7px;
   background: #878787;
   /* gray-400 */
   border-radius: 9999px;
+  opacity: 0.6;
+}
+
+.volume-slider::-webkit-slider-runnable-track:hover {
+  opacity: 1;
+  background: #acabab;
+  /* lighter gray on hover */
 }
 
 /* Firefox */
+
+.volume-slider::-moz-range-progress {
+  height: 7px;
+  background: #878787;
+  /* gray-400 */
+  border-radius: 9999px;
+  opacity: 0.6;
+}
+
+.volume-slider::-moz-range-progress:hover {
+  opacity: 1;
+  background: #acabab;
+  /* lighter gray on hover */
+}
 
 .volume-slider::-moz-range-thumb {
   width: 14px;
@@ -796,6 +826,12 @@ nav ul {
   /* gray-400 */
   border-radius: 9999px;
   cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb:hover {
+  opacity: 1;
+  background: #acabab;
+  /* lighter gray on hover */
 }
 
 @media (min-width: 768px) {
@@ -880,17 +916,25 @@ nav ul {
 }
 
 @media (min-width: 1280px) {
-  .xl\:my-5 {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
+  .xl\:absolute {
+    position: absolute;
+  }
+
+  .xl\:relative {
+    position: relative;
+  }
+
+  .xl\:my-6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .xl\:mb-2 {
     margin-bottom: 0.5rem;
   }
 
-  .xl\:ml-64 {
-    margin-left: 16rem;
+  .xl\:ml-0 {
+    margin-left: 0px;
   }
 
   .xl\:ml-7 {
@@ -909,8 +953,8 @@ nav ul {
     margin-top: 0.25rem;
   }
 
-  .xl\:mt-3 {
-    margin-top: 0.75rem;
+  .xl\:mt-4 {
+    margin-top: 1rem;
   }
 
   .xl\:size-20 {
@@ -918,21 +962,29 @@ nav ul {
     height: 5rem;
   }
 
-  .xl\:size-8 {
-    width: 2rem;
-    height: 2rem;
+  .xl\:size-7 {
+    width: 1.75rem;
+    height: 1.75rem;
   }
 
-  .xl\:w-\[38\%\] {
-    width: 38%;
+  .xl\:h-52 {
+    height: 13rem;
+  }
+
+  .xl\:w-14 {
+    width: 3.5rem;
+  }
+
+  .xl\:w-40 {
+    width: 10rem;
+  }
+
+  .xl\:w-\[40\%\] {
+    width: 40%;
   }
 
   .xl\:w-full {
     width: 100%;
-  }
-
-  .xl\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .xl\:flex-row {
@@ -943,8 +995,8 @@ nav ul {
     flex-direction: column-reverse;
   }
 
-  .xl\:justify-end {
-    justify-content: flex-end;
+  .xl\:gap-24 {
+    gap: 6rem;
   }
 
   .xl\:gap-\[21\.1rem\] {
@@ -975,5 +1027,19 @@ nav ul {
   .xl\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:h-72 {
+    height: 18rem;
+  }
+
+  .\32xl\:w-44 {
+    width: 11rem;
+  }
+
+  .\32xl\:w-\[35\%\] {
+    width: 35%;
   }
 }

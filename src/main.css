@@ -20,8 +20,7 @@ nav ul {
 .volume-slider {
   -webkit-appearance: none;
   transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-  height: 8px;
+  height: 7px;
   background: #2f2f2f; /* gray-500 */
   border-radius: 9999px;
   outline: none;
@@ -37,23 +36,44 @@ nav ul {
   cursor: pointer;
 }
 
-.volume-slider::-webkit-slider-runnable-track {
-  height: 8px;
-  background: #878787; /* gray-400 */
-  border-radius: 9999px;
+.volume-slider::-webkit-slider-thumb:hover {
+  background: #acabab; /* lighter gray on hover */
 }
 
-.volume-slider::-moz-range-progress {
-  height: 8px;
+.volume-slider::-webkit-slider-runnable-track {
+  height: 7px;
   background: #878787; /* gray-400 */
   border-radius: 9999px;
+  opacity: 0.6;
+}
+
+.volume-slider::-webkit-slider-runnable-track:hover {
+  opacity: 1;
+  background: #acabab; /* lighter gray on hover */
 }
 
 /* Firefox */
+.volume-slider::-moz-range-progress {
+  height: 7px;
+  background: #878787; /* gray-400 */
+  border-radius: 9999px;
+  opacity: 0.6;
+}
+
+.volume-slider::-moz-range-progress:hover {
+  opacity: 1;
+  background: #acabab; /* lighter gray on hover */
+}
+
 .volume-slider::-moz-range-thumb {
   width: 14px;
   height: 14px;
   background: #878787; /* gray-400 */
   border-radius: 9999px;
   cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb:hover {
+  opacity: 1;
+  background: #acabab; /* lighter gray on hover */
 }

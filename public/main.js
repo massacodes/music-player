@@ -14,7 +14,7 @@ const currentTimeLabel = document.getElementById("current-time");
 const durationLabel = document.getElementById("song-duration");
 const volumeSlider = document.getElementById("volume-slider");
 
-const songs = ["Gettin' My Mom On", "What do they know", "winter remix"];
+const songs = ["gettin-my-mom-on", "what-do-they-know", "winter-remix"];
 const Artists = ["Jack Stauber", "Mindless Self Indulgence", "Vivaldi"];
 const covers = [
   "url(../src/assets/HiLo-cover.jpg)",
@@ -38,7 +38,7 @@ loadSong(songs[songIndex]);
 function loadSong(song) {
   Title.innerText = song;
   Artist.innerText = Artists[artistIndex];
-  audio.src = `/src/assets/music/${song}.mp3`;
+  audio.src = `../src/assets/music/${song}.mp3`;
   cover.style.backgroundImage = covers[songIndex];
 }
 
