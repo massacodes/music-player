@@ -36,7 +36,7 @@ loadSong(songs[songIndex]);
 
 // Update song details
 function loadSong(song) {
-  Title.innerText = song;
+  Title.innerText = song.split("-").join(" ");
   Artist.innerText = Artists[artistIndex];
   audio.src = `../src/assets/music/${song}.mp3`;
   cover.style.backgroundImage = covers[songIndex];
