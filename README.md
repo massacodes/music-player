@@ -27,4 +27,4 @@ npm install
 
 ## Credits
 
-icons by João Gabriel Mendes Corrêa from thenounproject.com — licensed under CC BY 3.0
+icons by João Gabriel Mendes Corrêa and Chintuza from thenounproject.com — licensed under CC BY 3.0
