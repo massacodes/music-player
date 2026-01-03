@@ -567,10 +567,6 @@ video {
   margin-bottom: 0.25rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .mr-11 {
   margin-right: 2.75rem;
 }
@@ -599,10 +595,6 @@ video {
   display: none;
 }
 
-.h-5 {
-  height: 1.25rem;
-}
-
 .h-72 {
   height: 18rem;
 }
@@ -619,16 +611,8 @@ video {
   height: 100%;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .min-h-screen {
   min-height: 100vh;
-}
-
-.w-6 {
-  width: 1.5rem;
 }
 
 .w-8 {
@@ -755,6 +739,22 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-150 {
+  transition-duration: 150ms;
+}
+
 .progressBar {
   -webkit-appearance: none;
 }
@@ -779,6 +779,20 @@ nav ul {
   /* gray-500 */
   border-radius: 9999px;
   outline: none;
+}
+
+@media (min-width: 1536px) {
+  .volume-slider {
+    height: 12px;
+  }
+
+  .volume-slider::-webkit-slider-runnable-track {
+    height: 12px;
+  }
+
+  .volume-slider::-moz-range-progress {
+    height: 12px;
+  }
 }
 
 /* Chrome / Safari */
@@ -806,12 +820,6 @@ nav ul {
   opacity: 0.6;
 }
 
-.volume-slider::-webkit-slider-runnable-track:hover {
-  opacity: 1;
-  background: #acabab;
-  /* lighter gray on hover */
-}
-
 /* Firefox */
 
 .volume-slider::-moz-range-progress {
@@ -820,12 +828,6 @@ nav ul {
   /* gray-400 */
   border-radius: 9999px;
   opacity: 0.6;
-}
-
-.volume-slider::-moz-range-progress:hover {
-  opacity: 1;
-  background: #acabab;
-  /* lighter gray on hover */
 }
 
 .volume-slider::-moz-range-thumb {
@@ -841,6 +843,45 @@ nav ul {
   opacity: 1;
   background: #acabab;
   /* lighter gray on hover */
+}
+
+.hover\:scale-110:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.focus\:rounded:focus {
+  border-radius: 0.25rem;
+}
+
+.focus\:rounded-2xl:focus {
+  border-radius: 1rem;
+}
+
+.focus\:bg-white\/20:focus {
+  background-color: rgb(248 248 255 / 0.2);
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:ring-2:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-white\/20:focus {
+  --tw-ring-color: rgb(248 248 255 / 0.2);
+}
+
+.active\:scale-95:active {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @media (min-width: 768px) {
@@ -872,10 +913,6 @@ nav ul {
     height: 0.5rem;
   }
 
-  .md\:h-4 {
-    height: 1rem;
-  }
-
   .md\:h-52 {
     height: 13rem;
   }
@@ -884,8 +921,8 @@ nav ul {
     height: 1.5rem;
   }
 
-  .md\:w-5 {
-    width: 1.25rem;
+  .md\:w-6 {
+    width: 1.5rem;
   }
 
   .md\:w-\[50\%\] {
@@ -894,10 +931,6 @@ nav ul {
 
   .md\:w-\[88\%\] {
     width: 88%;
-  }
-
-  .md\:w-6 {
-    width: 1.5rem;
   }
 
   .md\:flex-col {
@@ -941,13 +974,45 @@ nav ul {
     position: relative;
   }
 
+  .xl\:right-\[\] {
+    right: ;
+  }
+
+  .xl\:right-\[2\] {
+    right: 2;
+  }
+
+  .xl\:right-\[20\] {
+    right: 20;
+  }
+
+  .xl\:right-\[20rem\] {
+    right: 20rem;
+  }
+
+  .xl\:right-\[1rem\] {
+    right: 1rem;
+  }
+
+  .xl\:right-\[19rem\] {
+    right: 19rem;
+  }
+
+  .xl\:right-\[18rem\] {
+    right: 18rem;
+  }
+
+  .xl\:right-\[19\.rem\] {
+    right: 19.rem;
+  }
+
+  .xl\:right-\[19\.5rem\] {
+    right: 19.5rem;
+  }
+
   .xl\:my-6 {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-  }
-
-  .xl\:mb-2 {
-    margin-bottom: 0.5rem;
   }
 
   .xl\:ml-0 {
@@ -982,11 +1047,6 @@ nav ul {
   .xl\:size-7 {
     width: 1.75rem;
     height: 1.75rem;
-  }
-
-  .xl\:size-5 {
-    width: 1.25rem;
-    height: 1.25rem;
   }
 
   .xl\:h-52 {
@@ -1053,15 +1113,117 @@ nav ul {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:h-72 {
-    height: 18rem;
+  .\32xl\:right-\[21\.5rem\] {
+    right: 21.5rem;
   }
 
-  .\32xl\:w-44 {
-    width: 11rem;
+  .\32xl\:right-\[21\.7rem\] {
+    right: 21.7rem;
   }
 
-  .\32xl\:w-\[35\%\] {
-    width: 35%;
+  .\32xl\:right-\[21\.9rem\] {
+    right: 21.9rem;
+  }
+
+  .\32xl\:right-\[21\.rem\] {
+    right: 21.rem;
+  }
+
+  .\32xl\:right-\[21\.6rem\] {
+    right: 21.6rem;
+  }
+
+  .\32xl\:my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .\32xl\:ml-10 {
+    margin-left: 2.5rem;
+  }
+
+  .\32xl\:ml-8 {
+    margin-left: 2rem;
+  }
+
+  .\32xl\:mt-1 {
+    margin-top: 0.25rem;
+  }
+
+  .\32xl\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
+  .\32xl\:size-28 {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .\32xl\:size-8 {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .\32xl\:size-9 {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .\32xl\:h-80 {
+    height: 20rem;
+  }
+
+  .\32xl\:h-\[\.65rem\] {
+    height: .65rem;
+  }
+
+  .\32xl\:w-64 {
+    width: 16rem;
+  }
+
+  .\32xl\:w-\[100\%\] {
+    width: 100%;
+  }
+
+  .\32xl\:w-\[45\%\] {
+    width: 45%;
+  }
+
+  .\32xl\:w-\[84\%\] {
+    width: 84%;
+  }
+
+  .\32xl\:w-full {
+    width: 100%;
+  }
+
+  .\32xl\:gap-36 {
+    gap: 9rem;
+  }
+
+  .\32xl\:gap-\[29\.5rem\] {
+    gap: 29.5rem;
+  }
+
+  .\32xl\:pt-8 {
+    padding-top: 2rem;
+  }
+
+  .\32xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .\32xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .\32xl\:font-medium {
+    font-weight: 500;
+  }
+
+  .\32xl\:font-semibold {
+    font-weight: 600;
   }
 }

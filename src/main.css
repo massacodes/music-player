@@ -26,6 +26,20 @@ nav ul {
   outline: none;
 }
 
+@media (min-width: 1536px) {
+  .volume-slider {
+    height: 12px;
+  }
+
+  .volume-slider::-webkit-slider-runnable-track {
+    height: 12px;
+  }
+
+  .volume-slider::-moz-range-progress {
+    height: 12px;
+  }
+}
+
 /* Chrome / Safari */
 .volume-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -47,22 +61,12 @@ nav ul {
   opacity: 0.6;
 }
 
-.volume-slider::-webkit-slider-runnable-track:hover {
-  opacity: 1;
-  background: #acabab; /* lighter gray on hover */
-}
-
 /* Firefox */
 .volume-slider::-moz-range-progress {
   height: 7px;
   background: #878787; /* gray-400 */
   border-radius: 9999px;
   opacity: 0.6;
-}
-
-.volume-slider::-moz-range-progress:hover {
-  opacity: 1;
-  background: #acabab; /* lighter gray on hover */
 }
 
 .volume-slider::-moz-range-thumb {
