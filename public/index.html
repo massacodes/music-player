@@ -47,11 +47,11 @@
           </div>
         </div>
         <div class="flex flex-col items-center justify-center">
-          <div class="flex flex-col xl:flex-col-reverse 2xl:w-[84%]">
+          <div class="flex w-full flex-col xl:flex-col-reverse 2xl:w-[84%]">
             <div class="2xl:w-full">
               <!-- progress-bar width is updated by JS to reflect playback position. -->
               <div
-                class="mt-5 h-[.35rem] w-full cursor-pointer rounded-md bg-gray-500 transition-colors duration-150 md:ml-0 md:h-2 md:w-[88%] xl:mt-1 xl:w-full 2xl:h-[.65rem] 2xl:w-[100%]"
+                class="mt-7 h-[.35rem] w-full cursor-pointer rounded-md bg-gray-500 transition-colors duration-150 md:ml-0 md:h-2 md:w-full xl:mt-1 xl:w-full 2xl:h-[.65rem] 2xl:w-[100%]"
                 id="progress-container"
               >
                 <div
@@ -65,7 +65,7 @@
               </div>
             </div>
             <div
-              class="mt-1 flex flex-row gap-[16.5rem] text-sm text-gray-400 md:gap-[15.5rem] xl:mt-4 xl:gap-[21.1rem] 2xl:mt-6 2xl:gap-[29.5rem] 2xl:text-lg"
+              class="mt-1 flex flex-row gap-[17.4rem] text-sm text-gray-400 md:gap-[15.5rem] xl:mt-4 xl:gap-[21.1rem] 2xl:mt-6 2xl:gap-[29.5rem] 2xl:text-lg"
             >
               <!-- Time displays: `current-time` updates during playback; `song-duration`
                    shows total duration once metadata is loaded. -->
@@ -82,7 +82,7 @@
               class="mr-11 transition-transform duration-150 hover:scale-110 active:scale-95 md:mr-10 xl:mr-12"
               id="prev-btn"
             >
-              <div class="h-8 w-8 md:h-6 md:w-6 2xl:size-8">
+              <div class="size-6 md:h-6 md:w-6 2xl:size-8">
                 <img
                   class="block h-full w-full object-contain"
                   src="/src/assets/icons/prev-icon.svg"
@@ -96,7 +96,7 @@
             >
               <!-- Play/Pause button: JS toggles visibility between `play-icon` and `pause-icon` -->
 
-              <div class="h-8 w-8 md:h-6 md:w-6 2xl:size-8" id="play-icon">
+              <div class="size-6 md:h-6 md:w-6 2xl:size-8" id="play-icon">
                 <img
                   class="block h-full w-full object-contain"
                   src="/src/assets/icons/play-icon.svg"
@@ -104,7 +104,7 @@
                 />
               </div>
               <div
-                class="hidden h-8 w-8 md:h-6 md:w-6 2xl:size-8"
+                class="hidden size-6 md:h-6 md:w-6 2xl:size-8"
                 id="pause-icon"
               >
                 <img
@@ -118,7 +118,7 @@
               id="next-btn"
               class="transition-transform duration-150 hover:scale-110 active:scale-95"
             >
-              <div class="h-8 w-8 md:h-6 md:w-6 2xl:size-8">
+              <div class="size-6 md:h-6 md:w-6 2xl:size-8">
                 <img
                   class="block h-full w-full object-contain"
                   src="/src/assets/icons/next-icon.svg"
@@ -133,7 +133,7 @@
       <!-- Volume control: slider adjusts `audio.volume` -->
 
       <div
-        class="right-[19rem] flex flex-col items-center gap-28 xl:absolute xl:right-[19.5rem] xl:ml-0 xl:h-52 xl:w-14 xl:gap-24 2xl:right-[21.6rem] 2xl:h-80 2xl:gap-36"
+        class="right-[19rem] flex flex-col items-center gap-28 sm:hidden md:hidden xl:absolute xl:right-[19.5rem] xl:ml-0 xl:h-52 xl:w-14 xl:gap-24 2xl:right-[21.6rem] 2xl:h-80 2xl:gap-36"
       >
         <img
           class="h-8 w-8 xl:size-7 2xl:size-9"
